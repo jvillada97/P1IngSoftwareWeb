@@ -9,6 +9,7 @@ import { CarService } from '../car.service';
 })
 export class CarListComponent implements OnInit {
   cars: Array<Car> = [];
+  results: Array<Number> = [];
   constructor(private carService:CarService) { }
 
   getCarsList() {
@@ -16,8 +17,14 @@ export class CarListComponent implements OnInit {
       this.cars = cars;
     });
   }
+
+  getNumbers(cars: Array<Car>):void {
+
+    this.results = [1,2,3];
+  }
   ngOnInit() {
     this.getCarsList();
+    this.getNumbers(this.cars);
   }
 
 }
