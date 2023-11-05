@@ -1,27 +1,27 @@
 <div class="container-fluid">
   <div class="col-md-4">
-    <table class="table">
-      <thead>
+    <table class="table table-dark">
+      <thead class="thead-dark">
         <tr>
-          <th class="h4">#</th>
-          <th class="h4">Marca</th>
-          <th class="h4">Línea</th>
-          <th class="h4">Modelo</th>
+          <th scope="col">#</th>
+          <th scope="col">Marca</th>
+          <th scope="col">Línea</th>
+          <th scope="col">Modelo</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let car of cars">
-          <td>
-            <dd>{{car.id}}</dd>
+          <td id="car-id">
+            <dd scope="row">{{car.id}}</dd>
           </td>
           <td>
-            <dd>{{car.marca}}</dd>
+            <dd scope="row">{{car.marca}}</dd>
           </td>
           <td>
-            <dd>{{car.linea}}</dd>
+            <dd scope="row">{{car.linea}}</dd>
           </td>
           <td>
-            <dd>{{car.modelo}}</dd>
+            <dd scope="row">{{car.modelo}}</dd>
           </td>
         </tr>
       </tbody>
