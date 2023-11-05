@@ -1,6 +1,7 @@
 export class Car {
     id: number;
     marca: string;
+    linea: string;
     referencia: string;
     modelo: number;
     kilometraje: number;
@@ -10,6 +11,7 @@ export class Car {
     constructor(
         id: number,
         marca: string,
+        linea: string,
         referencia: string,
         modelo: number,
         kilometraje: number,
@@ -18,6 +20,7 @@ export class Car {
     ){
         this.id = id;
         this.marca = marca;
+        this.linea = linea;
         this.referencia = referencia;
         this.modelo = modelo;
         this.kilometraje = kilometraje;

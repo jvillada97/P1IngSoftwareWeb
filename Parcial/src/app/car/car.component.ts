@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Car } from './car';
+import { CarService } from './car.service';
 
 @Component({
   selector: 'app-car',
@@ -7,10 +8,13 @@ import { Car } from './car';
   styleUrls: ['./car.component.css']
 })
 export class CarComponent implements OnInit {
-  private cars: Array<Car> = [];
+  
   constructor() { }
 
+  
+
   ngOnInit() {
+    
   }
 
 }
