@@ -9,7 +9,7 @@ import { CarService } from '../car.service';
 })
 export class CarListComponent implements OnInit {
   cars: Array<Car> = [];
-  results: Array<Number> = [];
+  results: Array<number> = [0, 0, 0];
   constructor(private carService:CarService) { }
 
   getCarsList() {
@@ -18,13 +18,17 @@ export class CarListComponent implements OnInit {
     });
   }
 
-  getNumbers(cars: Array<Car>):void {
-
-    this.results = [1,2,3];
+  getNumbers(marca: string):number {
+    let reps: number = 0;
+    this.cars.forEach(element => {
+      if (marca === element.marca){
+        reps += 1;
+      }
+    });
+    return reps;
   }
   ngOnInit() {
     this.getCarsList();
-    this.getNumbers(this.cars);
   }
 
 }
